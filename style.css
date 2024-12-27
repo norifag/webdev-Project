@@ -56,4 +56,8 @@ header {
 .flag img{
     display: block;
     padding: 8px 1rem;
+
+}
+.flag img:hover {
+  background-color: #f71414;
 }

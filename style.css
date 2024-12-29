@@ -1,6 +1,7 @@
 body {
   display: flex;
   flex-flow: column nowrap;
+
   /* align-items: center; */
   padding: 0;
   font-family: "Poppins";
@@ -16,6 +17,13 @@ nav {
   align-items: center;
   /* align-items: center; */
 }
+.biggercontainer {
+  display: flex;
+  width: 100%; /* khede ad ma fike 3ared la n2ool l container add lsheshe */
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
 .container1 {
   display: flex;
   flex-flow: column nowrap;
@@ -23,10 +31,11 @@ nav {
   align-items: flex-end;
   margin-left: auto;
   margin-right: auto;
-  width: 1170px;
-  height: 178.6px;
+  max-width: 1170px;
+  height: 128.6px;
   padding-top: 25px;
   padding-bottom: 25px;
+  margin-top: 20px;
 }
 header {
   display: block;
@@ -39,9 +48,8 @@ header {
 }
 .top {
   display: flex;
-  flex-direction: row;
-
-  align-items: center;
+  flex-direction: row nowrap;
+  align-items: flex-start;
 }
 .top li {
   display: flex;
@@ -77,8 +85,8 @@ header {
   justify-content: space-between;
   width: 760px;
   height: 50px;
-  padding-left: 5px;
-  padding-right: 10px;
+  /* padding-left: 5px;
+  padding-right: 10px; */
 }
 .top a:hover {
   background-color: #f71414;
@@ -101,7 +109,7 @@ header {
   align-items: center;
   border: solid #262626 1px;
   padding: 10px;
-
+  margin-right: 0.67rem;
   margin-top: 0.1rem;
 }
 .search-input {
@@ -119,17 +127,102 @@ header {
   color: rgb(154, 150, 150);
 }
 
-/* .slideshow .wrapper{
-
-  width: 60vw;
-  height: 75vh;
-  box-shadow: 10px 10px 20px black;
-  margin: 5rem auto;
+/* .slideshow .wrapper {
+  overflow: hidden;
 } */
-.slideshow img {
-  width: 1536px;
-}
+/* .slideshow img {
+  max-width: 1536px;
+} */
 .logo1 {
   width: 222.6px;
   height: 50px;
 }
+.text-belowsearch {
+  color: rgb(74, 71, 71);
+}
+.text-belowsearch span {
+  color: rgb(59, 57, 57);
+}
+/* .slideshow .wrapperholder {
+  display: grid;
+  grid-template-columns: repeat(5, 100%);
+  height: 100%;
+  width: 100%;
+} */
+/* .slideshow #slide1 {
+  background-image: url(photos-slider/01_yarnart_Slider_Bouquet.png);
+  background-position: center;
+}
+.slideshow #slide2 {
+  background-image: url(photos-slider/02_yarnart_Slider_Cotton_Fusion.png);
+  background-position: center;
+}
+.slideshow #slide3 {
+  background-image: url(photos-slider/03_yarnart_Slider_Forza.png);
+  background-position: center;
+}
+.slideshow #slide4 {
+  background-image: url(photos-slider/04_yarnart_Slider_Sypmhony_Dream.png);
+  background-position: center;
+}
+.slideshow #slide5 {
+  background-image: url(photos-slider/05_yarnart_Slider_Linen_Soft.png);
+  background-position: center;
+} */
+/* .slideshow .button-holder .button {
+  background-color: aliceblue;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  display: inline-block;
+  margin: 3rem;
+} */
+.slider-wrapper {
+  position: relative;
+  margin: 0 auto;
+  /* max-width: 1536px; */
+}
+.slider {
+  display: flex;
+  overflow-x: auto;
+  overflow: hidden;
+  /* aspect-ratio: 16/9; */
+  scroll-snap-type: x mandatory; /*the x value tells the css to snap along x-axis and the mandatory value is a strict value tehat forces the behaivour to always snap to the next snap position which creates the slider effect we want */
+  /* the snap effect wont be visible until we add*/
+  scroll-behavior: smooth;
+  /* -webkit-overflow-scrolling: touch; Smooth scrolling on iOS */
+}
+.slider img {
+  flex: 1 0 100%; /*shorthand property for setting flex row flex shrink flex spaces by setting to 1 every image will be set to same side in container
+  by setting to 0 every image will retain the width they need and not wrap its content
+  by setting flex spaces to 100% every image will have an intial size to 100% meaning it will take up the entire main container*/
+  scroll-snap-align: start;
+  object-fit: cover;
+  max-width: 1536px;
+}
+.slider-nav {
+  display: flex;
+  column-gap: 0.6rem;
+  position: absolute;
+  left: 50%; /*center the nav*/
+  transform: translateX(-50%);
+  z-index: 1;
+  margin-top: 0.4rem;
+}
+.slider-nav a {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  border: solid #262626 1.55px;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+.slider-nav a:hover {
+  opacity: 1;
+  background-color: #262626;
+}
+
+/* .slider::-webkit-scrollbar {
+  display: none; /* Safari and Chrome 
+}*/

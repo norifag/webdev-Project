@@ -130,12 +130,6 @@ header {
   color: rgb(154, 150, 150);
 }
 
-/* .slideshow .wrapper {
-  overflow: hidden;
-} */
-/* .slideshow img {
-  max-width: 1536px;
-} */
 .logo1 {
   width: 222.6px;
   height: 50px;
@@ -146,49 +140,15 @@ header {
 .text-belowsearch span {
   color: rgb(59, 57, 57);
 }
-/* .slideshow .wrapperholder {
-  display: grid;
-  grid-template-columns: repeat(5, 100%);
-  height: 100%;
-  width: 100%;
-} */
-/* .slideshow #slide1 {
-  background-image: url(photos-slider/01_yarnart_Slider_Bouquet.png);
-  background-position: center;
-}
-.slideshow #slide2 {
-  background-image: url(photos-slider/02_yarnart_Slider_Cotton_Fusion.png);
-  background-position: center;
-}
-.slideshow #slide3 {
-  background-image: url(photos-slider/03_yarnart_Slider_Forza.png);
-  background-position: center;
-}
-.slideshow #slide4 {
-  background-image: url(photos-slider/04_yarnart_Slider_Sypmhony_Dream.png);
-  background-position: center;
-}
-.slideshow #slide5 {
-  background-image: url(photos-slider/05_yarnart_Slider_Linen_Soft.png);
-  background-position: center;
-} */
-/* .slideshow .button-holder .button {
-  background-color: aliceblue;
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  display: inline-block;
-  margin: 3rem;
-} */
+
 .slider-wrapper {
   position: relative;
   margin: 0 auto;
-  /* max-width: 1536px; */
 }
 .slider {
   display: flex;
   overflow-x: auto;
-  overflow: hidden;
+  overflow: hidden; /*removing hori scroll bar*/
   /* aspect-ratio: 16/9; */
   scroll-snap-type: x mandatory; /*the x value tells the css to snap along x-axis and the mandatory value is a strict value tehat forces the behaivour to always snap to the next snap position which creates the slider effect we want */
   /* the snap effect wont be visible until we add*/

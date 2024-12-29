@@ -144,6 +144,7 @@ header {
 .slider-wrapper {
   position: relative;
   margin: 0 auto;
+  max-width: 1536px; /* it forces the slide to take this much space if available and dynamically resize for smaller screens*/
 }
 .slider {
   display: flex;
@@ -185,7 +186,51 @@ header {
   opacity: 1;
   background-color: #262626;
 }
+.text-belowsearch a {
+  text-decoration: none;
+  text-align: center;
+  color: rgb(90, 86, 86);
+  word-spacing: normal;
+}
+.text-belowsearch a:hover {
+  color: #f71414;
+}
 
 /* .slider::-webkit-scrollbar {
   display: none; /* Safari and Chrome 
 }*/
+/*1. slideshow
+
+    The outermost container for the entire slideshow.
+    This section groups all related elements, including the images and navigation dots.
+
+2. slider-wrapper
+
+    A wrapper for the slider and navigation components.
+    Ensures proper alignment and clipping of the content (overflow: hidden).
+    Typically defines the visible area of the slideshow.
+
+3. slider
+
+    A container for all the images in the slideshow.
+    Uses flexbox to arrange the images in a horizontal row.
+    Enables smooth horizontal scrolling (scroll-snap-type, scroll-behavior) for a seamless sliding experience.
+
+4. slider-nav
+
+    A container for the navigation dots.
+    Positioned (typically absolute) over or below the slideshow.
+    Allows users to navigate between slides by clicking on the dots (via href links to slide IDs).
+
+5. slider-nav a
+
+    Individual navigation dots within the slider-nav container.
+    Styled as small clickable circles, often with hover effects.
+    href attributes link to corresponding slide IDs for smooth scrolling.
+    
+How These Classes Work Together
+
+    slideshow acts as the main container for the entire component.
+    slider-wrapper ensures only one image is visible at a time by clipping overflowing content.
+    slider arranges the images horizontally in a scrollable area.
+    slider-nav and its children (a) provide an interactive way to jump between specific slides using their IDs (#slide1, #slide2, etc.).*/

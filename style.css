@@ -4,10 +4,14 @@ html {
 body {
   display: flex;
   flex-flow: column nowrap;
-
+  align-items: center;
   /* align-items: center; */
   padding: 0;
   font-family: "Poppins";
+  /* left: 196.5px;
+  right: 196.5px; */
+  font-size: 14px;
+  color: #444;
 }
 
 nav {
@@ -117,13 +121,12 @@ header {
 }
 .search-input {
   font-size: 14px;
-  font-weight: 200;
+  font-weight: 500;
   outline: none;
   background-color: transparent;
   border: none;
   width: 690px;
   color: #262626;
-  letter-spacing: 1px;
 }
 .search-input::placeholder,
 .search-icon {
@@ -195,7 +198,45 @@ header {
 .text-belowsearch a:hover {
   color: #f71414;
 }
-
+.emptyspace1 {
+  width: 1536px;
+  height: 35px;
+  margin-top: 24px;
+}
+.picsleft {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.picsleft img {
+  max-width: 570px;
+  max-height: 570px;
+}
+.emptyspace2 {
+  width: 1536px;
+  height: 35px;
+}
+.picscontainer {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+.picsright {
+  display: flex;
+  flex-flow: column nowrap;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.picsright img {
+  max-width: 570px;
+  max-height: 270px;
+}
+.emptyspace3 {
+  height: 25px;
+}
+.imagepatternhomepage img {
+  max-height: 269.183px;
+  max-width: 1170px;
+}
 /* .slider::-webkit-scrollbar {
   display: none; /* Safari and Chrome 
 }*/
@@ -234,3 +275,360 @@ How These Classes Work Together
     slider-wrapper ensures only one image is visible at a time by clipping overflowing content.
     slider arranges the images horizontally in a scrollable area.
     slider-nav and its children (a) provide an interactive way to jump between specific slides using their IDs (#slide1, #slide2, etc.).*/
+.product-background {
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box; /*Ensures padding and borders are included in the width calculation so 
+  the element doesn’t unintentionally exceed the intended size.*/
+  height: 252px;
+  background-image: url(products/breadcrumb-1.jpeg);
+  background-size: cover;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  margin: 0px auto 40px;
+}
+.text-background {
+  color: #f71414;
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin-top: 115px;
+  font-weight: 500;
+}
+.text-background a {
+  outline: none;
+  color: white;
+  text-decoration: none;
+}
+.text-background span {
+  color: white;
+}
+.text-background a:hover {
+  color: #f71414;
+}
+.products-nav {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  margin: 0 auto 0 auto;
+  padding: 1.5rem 1.5rem;
+  list-style: none;
+}
+.products-nav li {
+  margin: 0 1rem 1rem 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  padding: 8px 22px 8px 22px;
+  border: 2px solid #f71414;
+  background-color: #f71414;
+  border-radius: 5px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  color: #ffffff;
+}
+.products-nav li:hover {
+  background-color: #ffffff;
+  color: #f62c2b;
+  border-color: #f62c2b;
+}
+.product-categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /*Defines the layout with five columns, 
+  each taking up 1fr, which means equal distribution of available space.*/
+  max-width: 940px;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.categories img {
+  display: block;
+  max-width: 178px;
+  height: 178px;
+}
+.product-categories img {
+  display: block;
+  max-width: 224px;
+  height: 224px;
+  border: 3px solid #f3f3f3;
+  border-radius: 5px 5px 0px 0px;
+}
+.textbelowproduct {
+  text-align: center;
+  background-color: #fafafa;
+  padding: 10px 20px 20px 20px;
+  max-width: 224px;
+  max-height: 120px;
+  font-weight: 500;
+}
+.textbelowproduct a {
+  font-weight: 600;
+  padding: 8px 22px 8px 22px;
+  color: #ffffff;
+  background-color: #364052;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.textbelowproduct a:hover {
+  background-color: #ffffff;
+  color: #364052;
+  border-color: #364052;
+}
+.textbelowproduct h4 {
+  margin-bottom: 20px;
+}
+.containercolors {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+}
+.wholecard {
+  width: 270px;
+  height: 381px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-top: 3px solid #f62c2b;
+  background-color: #f7f6f7;
+  border-bottom: 2px solid #dddddd;
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+}
+.headercard {
+  text-align: center;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #dddddd;
+}
+.headertext {
+  background-color: #f7f6f7;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #dddddd;
+}
+.yarn {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 12.5px;
+  border-bottom: 2px solid #dddddd;
+  align-items: flex-start;
+}
+.yarn img {
+  max-width: 67px;
+  height: 83px;
+}
+.yarntext {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: left;
+}
+.yarntext span {
+  font-weight: 600;
+}
+.threeicons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  gap: 5px;
+  border-bottom: 2px solid #dddddd;
+}
+.threeicons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 5px 7.5px 5px 7.5px;
+  gap: 5px;
+  border-bottom: 2px solid #dddddd;
+}
+.smallicons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.listbar {
+  width: 868.4px;
+  height: 54px;
+  background-color: #ebebeb;
+  text-align: center;
+}
+.listbar span {
+  position: absolute;
+  padding: 16px 0px 16px 0px;
+  left: 50%;
+  font-size: 14px;
+  font-family: lato;
+}
+.items {
+  padding: 0px 15px 0px 15px;
+}
+.ahmadlist {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.ahmadlist img {
+  max-width: 224px;
+  height: 224px;
+}
+.yarntext1 {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 12px;
+}
+.ahmadlist {
+  margin-top: 2rem;
+}
+.flexitem {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+.slider-wrapperitem {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  max-width: 561.6px; /* it forces the slide to take this much space if available and dynamically resize for smaller screens*/
+}
+.slideritem {
+  display: flex;
+  overflow-x: auto;
+  overflow: hidden; /*removing hori scroll bar*/
+  /* aspect-ratio: 16/9; */
+  scroll-snap-type: x mandatory; /*the x value tells the css to snap along x-axis and the mandatory value is a strict value tehat forces the behaivour to always snap to the next snap position which creates the slider effect we want */
+  /* the snap effect wont be visible until we add*/
+  scroll-behavior: smooth;
+  /* -webkit-overflow-scrolling: touch; Smooth scrolling on iOS */
+}
+.slideritem img {
+  flex: 1 0 100%; /*shorthand property for setting flex row flex shrink flex spaces by setting to 1 every image will be set to same side in container
+  by setting to 0 every image will retain the width they need and not wrap its content
+  by setting flex spaces to 100% every image will have an intial size to 100% meaning it will take up the entire main container*/
+  scroll-snap-align: start;
+  object-fit: cover;
+  max-width: 561.6px;
+}
+.slider-navitem {
+  display: flex;
+  column-gap: 0.6rem;
+
+  /* left: 50%; center the nav */
+
+  z-index: 1;
+  margin-top: 0.4rem;
+}
+/* .slider-navitem a {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  border: solid #262626 1.55px;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+.slider-navitem a:hover {
+  opacity: 1;
+  background-color: #262626;
+} */
+.slider-navitem img {
+  max-width: 106.317px;
+}
+.slider-navitem {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 15px;
+}
+
+.slider-navitem a {
+  border: 1px solid rgba(153, 153, 153, 0.8);
+  margin-bottom: 6px;
+}
+.wholecarditem {
+  width: 578.4px;
+  height: 350px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-top: 3px solid #f62c2b;
+  background-color: #f7f6f7;
+  border-bottom: 2px solid #dddddd;
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+}
+.headercard {
+  text-align: center;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #dddddd;
+}
+.headertext {
+  background-color: #f7f6f7;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #dddddd;
+}
+.yarnitem {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 12.5px;
+  border-bottom: 2px solid #dddddd;
+  align-items: center;
+  justify-content: center;
+}
+.yarnitem img {
+  max-width: 67px;
+  height: 83px;
+}
+.yarntextitem {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+}
+.yarntextitem span {
+  font-weight: 600;
+}
+.threeiconsitem {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  gap: 5px;
+  border-bottom: 2px solid #dddddd;
+  justify-content: space-between;
+}
+.threeiconsitem {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.smalliconsitem {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.smalliconsitem img {
+  max-width: 40px;
+}
+.itemtextabovecard {
+  color: #f62c2b;
+  font-size: 16px;
+  border-right-width: 1px;
+  padding: 0 10px 0 0;
+  margin-top: 45px;
+  margin-bottom: 15px;
+}
+.itemtextabovecard span {
+  border-right: 1px solid #444;
+  padding: 0 10px 0 0;
+}
+.descriptionitem h1 {
+  margin: 0;
+}
+.descriptionitem {
+  padding: 0 0 0 30px;
+}
+.griditem1050 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.griditem1050 img {
+  max-width: 170px;
+}
+.othercolors {
+  padding: 1rem 0 2rem 0;
+}

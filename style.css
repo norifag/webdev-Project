@@ -220,6 +220,13 @@ header {
   flex-flow: row;
   align-items: center;
 }
+.picsright::before {
+  transform: skewX(-45deg);
+  transition: transform 0.5s ease;
+}
+.picsright:hover::before {
+  transform: translateX(200%) skewX(-45deg);
+}
 .picsright {
   display: flex;
   flex-flow: column nowrap;
@@ -274,7 +281,7 @@ How These Classes Work Together
     slideshow acts as the main container for the entire component.
     slider-wrapper ensures only one image is visible at a time by clipping overflowing content.
     slider arranges the images horizontally in a scrollable area.
-    slider-nav and its children (a) provide an interactive way to jump between specific slides using their IDs (#slide1, #slide2, etc.).*/
+    slider-nav and its children (a) provide an interactive way to jump between specific slides using their IDs (fde1, #slide2, etc.).*/
 .product-background {
   width: 100%;
   max-width: 100vw;
@@ -496,6 +503,9 @@ How These Classes Work Together
   scroll-snap-type: x mandatory; /*the x value tells the css to snap along x-axis and the mandatory value is a strict value tehat forces the behaivour to always snap to the next snap position which creates the slider effect we want */
   /* the snap effect wont be visible until we add*/
   scroll-behavior: smooth;
+
+  /* Smooth zoom effect */
+
   /* -webkit-overflow-scrolling: touch; Smooth scrolling on iOS */
 }
 .slideritem img {
@@ -505,6 +515,11 @@ How These Classes Work Together
   scroll-snap-align: start;
   object-fit: cover;
   max-width: 561.6px;
+  transition: transform 0.5s ease;
+  /* Prevent interaction with the arrow */
+}
+.slideritem img:hover {
+  transform: scale(3); /* Zoom the image to 1.2 times its size */
 }
 .slider-navitem {
   display: flex;
@@ -514,6 +529,10 @@ How These Classes Work Together
 
   z-index: 1;
   margin-top: 0.4rem;
+}
+
+.selected {
+  background-color: #262626;
 }
 /* .slider-navitem a {
   width: 0.8rem;
@@ -625,10 +644,67 @@ How These Classes Work Together
 .griditem1050 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 2rem;
 }
 .griditem1050 img {
   max-width: 170px;
+  border: 3px solid #f9f9f9;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 500ms;
 }
 .othercolors {
   padding: 1rem 0 2rem 0;
+}
+.griditem1050 {
+  text-align: center;
+}
+.foot {
+  color: #999;
+
+  padding-top: 44px;
+  width: 1536px;
+  border-top: solid 2px #f0f0f1;
+  font-size: 14px;
+}
+.containerfoot {
+  /* width: 970px; */
+  padding-right: 15px;
+  line-height: 16px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #262626;
+  padding-bottom: 0px;
+}
+.contfoot {
+  position: relative;
+  left: -33px;
+  box-sizing: border-box;
+  /* width: 1036px;
+  max-width: 1036px; */
+  width: 100%;
+  padding-left: 33px;
+  padding-right: 33px;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.leftfoot {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+.middletextfoot {
+  text-align: center;
+}
+.righttextfoot {
+  text-align: right;
+}
+.righttextfootcont {
+  padding-right: 15px;
+  padding-left: 15px;
+
+  padding-bottom: 20px;
 }

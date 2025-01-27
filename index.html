@@ -23,11 +23,23 @@
             <div class="uls">
               <ul>
                 <li><a href="index.html">HOME PAGE</a></li>
-                <li><a href="#about">ABOUT US</a></li>
+                <li>
+                  <a href="#about" onmouseout="alert('about who?')">ABOUT US</a>
+                </li>
                 <li><a href="products.html">PRODUCTS</a></li>
-                <li><a href="#patterns">PATTERNS</a></li>
+                <li>
+                  <a href="#patterns" onmouseout="alert('PATTERNS? HELL NAH')"
+                    >PATTERNS</a
+                  >
+                </li>
 
-                <li><a href="#contact">CONTACT</a></li>
+                <li>
+                  <a
+                    href="#contact"
+                    onmouseout="alert('no contacts ur friendless')"
+                    >CONTACT</a
+                  >
+                </li>
               </ul>
               <ul class="flag">
                 <li>
@@ -44,7 +56,12 @@
           </header>
           <div>
             <div class="search">
-              <input class="search-input" type="search" placeholder="Search " />
+              <input
+                class="search-input"
+                type="search"
+                placeholder="Search "
+                name="name"
+              />
               <span class="search-icon material-symbols-outlined">
                 search
               </span>
@@ -106,7 +123,9 @@
     <div class="emptyspace2"></div>
     <div class="picscontainer">
       <div class="picsleft">
-        <img src="pics on home page/Adore_Dream_banner.png" />
+        <a href="colors.html">
+          <img src="pics on home page/Adore_Dream_banner.png"
+        /></a>
       </div>
 
       <div class="picsright">
@@ -125,5 +144,19 @@
         src="pics on home page/yarnart_pattern_web_tasarim_anasayfa_benner.png"
       />
     </div>
+    <script src="script.js" defer></script>
+    <div class="emptyspace2"></div>
+    <footer class="foot">
+      <div class="containerfoot">
+        <div class="contfoot">
+          <div class="leftfoot">2021 YARNART</div>
+          <div class="righttextfootcont">
+            <div class="righttextfoot">
+              Web Tasarım | Magna Dijital Pazarlama Ajansı
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

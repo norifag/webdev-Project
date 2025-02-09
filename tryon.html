@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="tryon.css" />
+  </head>
+  <body>
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <img
+            id="slide1"
+            src="photos slider/01_yarnart_Slider_Bouquet.png"
+            alt="bouquet"
+          />
+        </div>
+        <div class="slide">
+          <img
+            id="slide2"
+            src="photos slider/02_yarnart_Slider_Cotton_Fusion.png"
+            alt="cotton fusion"
+          />
+        </div>
+        <div class="slide">
+          <img
+            id="slide3"
+            src="photos slider/03_yarnart_Slider_Forza.png"
+            alt="forza"
+          />
+        </div>
+        <div class="slide">
+          <img
+            id="slide4"
+            src="photos slider/04_yarnart_Slider_Sypmhony_Dream.png"
+            alt="symphony dream"
+          />
+        </div>
+        <div class="slide">
+          <img
+            id="slide5"
+            src="photos slider/05_yarnart_Slider_Linen_Soft.png"
+            alt="linen soft"
+          />
+        </div>
+      </div>
+
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    <div class="slider-nav">
+      <a href="#slide1" data-index="0"></a>
+      <a href="#slide2" data-index="1"></a>
+      <a href="#slide3" data-index="2"></a>
+      <a href="#slide4" data-index="3"></a>
+      <a href="#slide5" data-index="4"></a>
+    </div>
+    <script src="tryon.js"></script>
+  </body>
+</html>

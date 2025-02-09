@@ -152,12 +152,13 @@ header {
 .slider {
   display: flex;
   overflow-x: auto;
-  overflow: hidden; /*removing hori scroll bar*/
+  overflow: hidden; /*removing hori scroll bar
   /* aspect-ratio: 16/9; */
   scroll-snap-type: x mandatory; /*the x value tells the css to snap along x-axis and the mandatory value is a strict value tehat forces the behaivour to always snap to the next snap position which creates the slider effect we want */
   /* the snap effect wont be visible until we add*/
   scroll-behavior: smooth;
   /* -webkit-overflow-scrolling: touch; Smooth scrolling on iOS */
+  white-space: nowrap;
 }
 .slider img {
   flex: 1 0 100%; /*shorthand property for setting flex row flex shrink flex spaces by setting to 1 every image will be set to same side in container
@@ -707,4 +708,53 @@ How These Classes Work Together
   padding-left: 15px;
 
   padding-bottom: 20px;
+}
+#suggestionsBox {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  width: 690px;
+  z-index: 1000;
+}
+
+/* Individual suggestion items */
+#suggestionsBox li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#suggestionsBox li:hover {
+  background: #f0f0f0;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+.prev:hover,
+.next:hover {
+  background: rgba(0, 0, 0, 0.8);
 }

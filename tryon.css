@@ -1,0 +1,86 @@
+/* Wrapper for the slider */
+.slider-wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1536px;
+  overflow: hidden;
+}
+
+/* Main slider container */
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+
+/* Hide scrollbar for Chrome/Safari */
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ensure images take full width */
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+  max-width: 1536px;
+}
+
+/* Slider navigation dots */
+.slider-nav {
+  display: flex;
+  column-gap: 0.6rem;
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Styling for dots */
+.slider-nav a {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  border: solid #262626 1.55px;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+/* Active dot styling */
+.slider-nav a.active {
+  opacity: 1;
+  background-color: #262626;
+}
+
+/* Arrow buttons */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
